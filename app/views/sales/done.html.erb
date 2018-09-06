@@ -1,0 +1,19 @@
+<h3>"El registro fue almacenado con éxito!" </h3>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Panel heading</div>
+
+  <!-- Table -->
+    <ul class = 'list-group'>
+      <% @sales.each do |s| %>
+        <li><%= s.cod %></li>
+        <li><%= s.detail %></li>
+        <li><%= s.category %></li>
+        <li><%= s.value %></li>
+        <li><%= s.discount %></li>
+        <li><%= s.total %></li>
+      <% end %>
+    </ul>
+</div>
+
+<%= link_to 'Volver', sales_new_path %>

@@ -1,0 +1,24 @@
+<h1> Formulario de ventas </h1>
+<div class = 'row'>
+    <div class = 'col-md-10'>
+        <div class = 'well'>    
+            <%= form_with model: @sale, local: true do |f|%>
+                <p><%= f.label :cod %></p>
+                <p><%= f.number_field :cod %></p>
+                <p><%= f.label :detail %></p>
+                <p><%= f.text_area :detail %></p>
+                <p><%= f.label :category %></p>
+                <p><%= f.text_field :category %></p>
+                <p><%= f.label :value %></p>
+                <p><%= f.number_field :value %></p>
+                <p><%= f.label :discount %></p>
+                <p><%= f.text_field :discount %></p>
+                <p><%= f.label :tax %></p>
+                <p><%= f.check_box :tax %></p>
+                <p><%= f.label :total %></p>
+                <p><%= f.text_field :total %></p>
+                <p><%= f.submit "Guardar", class:'btn btn-primary'%></p>
+            <% end %>
+        </div>
+    </div>
+</div>
